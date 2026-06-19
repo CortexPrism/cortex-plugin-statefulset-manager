@@ -1,0 +1,26 @@
+{
+  "name": "cortex-plugin-statefulset-manager",
+  "version": "1.0.0",
+  "description": "StatefulSet & Volume Manager — K8s StatefulSet snapshot scheduling, volume resizing, cross-AZ replication, DR testing",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-statefulset-manager",
+  "homepage": "https://cortexprism.io/marketplace/plugins/statefulset-manager",
+  "capabilities": ["tools", "network:fetch"],
+  "tools": [
+    { "name": "stateful_snapshot", "description": "Schedule volume snapshots", "params": [] },
+    { "name": "stateful_resize", "description": "Resize persistent volumes", "params": [] },
+    {
+      "name": "stateful_verify_replication",
+      "description": "Verify cross-AZ replication",
+      "params": []
+    },
+    { "name": "stateful_dr_test", "description": "Run disaster recovery test", "params": [] }
+  ],
+  "dependencies": {},
+  "peerDependencies": { "cortex": ">=1.0.0" },
+  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+}
